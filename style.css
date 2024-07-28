@@ -1,0 +1,14 @@
+body {
+    background: lightgrey;
+}
+
+#container {
+    display: flex;
+    border: 10px solid red;
+    justify-content: center;
+}
+
+#resizeBtn {
+    margin-bottom: 16px;
+    padding: 4px 12px;
+}
