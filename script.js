@@ -6,7 +6,12 @@ function drawGrid(size) {
         for (let j = 0; j < size; j++) {
             const square = document.createElement("div");
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "black";
+                //limit random to not generate white or close to white
+                //white will white-out
+                const red = Math.floor(Math.random() * 155) + 90;
+                const green = Math.floor(Math.random() * 155) + 90;
+                const blue = Math.floor(Math.random() * 155) + 90;
+                square.style.backgroundColor = `rgb(${red}, ${green}, ${blue}`;
             });
             squareSize = 800 / size;
             square.style.cssText = `width: ${squareSize}px; height: ${squareSize}px;`;
